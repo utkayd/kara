@@ -111,7 +111,7 @@ function M.setup(opts)
 
 		Identifier = { fg = colors.gray10 },
 		Ignore = { fg = colors.gray3 },
-		IncSearch = { fg = colors.bg, bg = colors.orange },
+		IncSearch = { fg = colors.fg, bg = colors.gray1 },
 		Include = { fg = colors.blue, italic = config.italic_keywords == "italic" },
 
 		Keyword = { fg = colors.red, italic = config.italic_keywords == "italic" },
@@ -148,7 +148,8 @@ function M.setup(opts)
 
 		Repeat = { fg = colors.red },
 
-		Search = { fg = colors.gray4, bg = colors.orange },
+		Search = { fg = colors.fg, bg = colors.gray1 },
+		CurSearch = { fg = colors.bg, bg = colors.yellow },
 		SignColumn = { bg = colors.bg1 },
 		Special = { fg = colors.gray3 },
 		SpecialChar = { fg = colors.yellow },
@@ -326,22 +327,22 @@ function M.setup(opts)
 		BlinkCmpKindCopilot = { fg = colors.blue3 },
 
 		-- Snacks.nvim - Dashboard
-		SnacksDashboardNormal = { fg = colors.fg },
-		SnacksDashboardDesc = { fg = colors.fg },
-		SnacksDashboardDir = { fg = colors.fg },
+		SnacksDashboardNormal = { fg = colors.gray1 },
+		SnacksDashboardDesc = { fg = colors.gray1 },
+		SnacksDashboardDir = { fg = colors.gray2 },
 		SnacksDashboardFile = { fg = colors.fg },
 		SnacksDashboardTerminal = { fg = colors.fg },
 		SnacksDashboardHeader = { fg = colors.gray1, bold = true },
-		SnacksDashboardTitle = { fg = colors.blue, bold = true },
-		SnacksDashboardIcon = { fg = colors.blue },
-		SnacksDashboardKey = { fg = colors.blue3 },
-		SnacksDashboardFooter = { fg = colors.blue, italic = true },
-		SnacksDashboardSpecial = { fg = colors.gray4 },
+		SnacksDashboardTitle = { fg = colors.gray1, bold = true },
+		SnacksDashboardIcon = { fg = colors.gray1 },
+		SnacksDashboardKey = { fg = colors.fg },
+		SnacksDashboardFooter = { fg = colors.gray1, italic = true },
+		SnacksDashboardSpecial = { fg = colors.yellow },
 
 		-- Snacks.nvim - Picker
 		SnacksPicker = { fg = colors.fg, bg = colors.bg2 },
-		SnacksPickerBorder = { fg = colors.gray9, bg = colors.bg2 },
-		SnacksPickerTitle = { fg = colors.blue, bg = colors.bg2 },
+		SnacksPickerBorder = { fg = colors.gray1, bg = colors.bg2 },
+		SnacksPickerTitle = { fg = colors.gray1, bg = "NONE" },
 		SnacksPickerCursorLine = { bg = colors.bg3 },
 		SnacksPickerListCursorLine = { bg = colors.bg3, bold = true },
 		SnacksPickerPreviewCursorLine = { bg = colors.bg3, bold = true },
@@ -369,7 +370,7 @@ function M.setup(opts)
 		SnacksPickerTotals = { fg = colors.gray8 },
 		SnacksPickerToggle = { fg = colors.yellow },
 
-		SnacksPickerIcon = { fg = colors.gray4 },
+		SnacksPickerIcon = { fg = colors.gray4, bg = "NONE" },
 		SnacksPickerIconFile = { fg = colors.fg },
 		SnacksPickerIconEvent = { fg = colors.gray4 },
 		SnacksPickerIconArray = { fg = colors.fg },
