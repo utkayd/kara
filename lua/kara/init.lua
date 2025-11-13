@@ -7,26 +7,22 @@ M.colors = {
 	bg = "#191B20",
 
 	-- Background variants
-	bg1 = "#1E2026",  -- line_bg, gutter_bg  
-	bg2 = "#16181D",  -- dark, black
-	bg3 = "#272932",  -- visual_select_bg, black1
-	bg4 = "#21252D",  -- old gray
+	bg1 = "#1E2026", -- line_bg, gutter_bg
+	bg2 = "#16181D", -- dark, black
+	bg3 = "#272932", -- visual_select_bg, black1
+	bg4 = "#21252D", -- old gray
 
 	-- Foreground/Gray variants
-	gray1 = "#343842",
-	gray2 = "#4D5264",  -- comment, vsplit_bg
-	gray3 = "#495163",  -- selection_fg
-	gray4 = "#515669",  -- gray_punc
-	gray5 = "#515761",  -- popup_back, context
-	gray6 = "#555B6C",  -- line_fg
-	gray7 = "#5E697E",  -- selection_bg
-	gray8 = "#606978",  -- non_text
-	gray9 = "#6E7380",  -- old gray2
-	gray10 = "#707891", -- cl_bg
-	gray11 = "#AEAFAD", -- cursor_bg
-	gray12 = "#BBBBBB", -- accent
-	gray13 = "#cccccc", -- vsplit_fg
-	gray14 = "#CFD0D7", -- white1
+	gray1 = "#4D5264", -- comment, vsplit_bg
+	gray2 = "#495163", -- selection_fg
+	gray3 = "#515669", -- gray_punc
+	gray4 = "#555B6C", -- line_fg
+	gray5 = "#5E697E", -- selection_bg
+	gray6 = "#606978", -- non_text
+	gray7 = "#6E7380", -- old gray2
+	gray8 = "#AEAFAD", -- cursor_bg
+	gray9 = "#BBBBBB", -- accent
+	gray10 = "#CFD0D7", -- white1
 
 	-- Primary colors
 	red = "#E85A84",
@@ -36,7 +32,7 @@ M.colors = {
 	blue = "#7EB7E6",
 	blue2 = "#568BB4",
 	blue3 = "#6CAEC0",
-	yellow = "#E9D26C",
+	yellow = "#EED49F",
 	orange = "#E0828D",
 	orange2 = "#E39A65",
 	pink = "#D895C7",
@@ -83,7 +79,7 @@ function M.setup(opts)
 
 		Character = { fg = colors.yellow },
 		ColorColumn = { bg = colors.bg3 },
-		Comment = { fg = colors.gray2, italic = config.italic_comments == "italic" },
+		Comment = { fg = colors.gray1, italic = config.italic_comments == "italic" },
 		Conceal = { fg = colors.fg },
 		Conditional = { fg = colors.red },
 		Constant = { fg = colors.pink },
@@ -94,13 +90,13 @@ function M.setup(opts)
 
 		Debug = { fg = colors.fg },
 		Define = { fg = colors.blue },
-		Delimiter = { fg = colors.gray4 },
+		Delimiter = { fg = colors.gray3 },
 		DiffAdd = { fg = colors.green },
 		DiffAdded = { fg = colors.green },
 		DiffChange = { fg = colors.green },
 		DiffDelete = { fg = colors.red },
 		DiffRemoved = { fg = colors.red },
-		DiffText = { fg = colors.gray14 },
+		DiffText = { fg = colors.gray10 },
 		DiffFile = { fg = colors.pink },
 
 		Error = { fg = colors.red, bg = colors.bg, bold = true },
@@ -108,23 +104,23 @@ function M.setup(opts)
 		Exception = { fg = colors.fg },
 
 		Float = { fg = colors.orange },
-		FloatBorder = { fg = colors.gray9, bg = "NONE" },
-		FoldColumn = { fg = colors.gray6 },
+		FloatBorder = { fg = colors.gray7, bg = "NONE" },
+		FoldColumn = { fg = colors.gray4 },
 		Folded = { fg = colors.fg, bg = colors.bg4 },
 		Function = { fg = colors.green },
 
-		Identifier = { fg = colors.gray14 },
-		Ignore = { fg = colors.gray4 },
+		Identifier = { fg = colors.gray10 },
+		Ignore = { fg = colors.gray3 },
 		IncSearch = { fg = colors.bg, bg = colors.orange },
 		Include = { fg = colors.blue, italic = config.italic_keywords == "italic" },
 
 		Keyword = { fg = colors.red, italic = config.italic_keywords == "italic" },
 
 		Label = { fg = colors.red },
-		LineNr = { fg = colors.gray6, bg = colors.bg1 },
+		LineNr = { fg = colors.gray4, bg = colors.bg1 },
 
 		Macro = { fg = colors.red, italic = config.italic_keywords == "italic" },
-		MatchParen = { fg = colors.gray14, bg = colors.bg2 },
+		MatchParen = { fg = colors.gray10, bg = colors.bg2 },
 		MatchParenCur = { underline = true },
 		MatchWord = { underline = true },
 		MatchWordCur = { underline = true },
@@ -133,16 +129,16 @@ function M.setup(opts)
 		MsgArea = { fg = colors.fg, bg = config.transparent_background and "NONE" or colors.bg },
 		MsgSeparator = { fg = colors.fg, bg = colors.bg },
 
-		NonText = { fg = colors.gray9 },
+		NonText = { fg = colors.gray7 },
 		Normal = { fg = colors.fg, bg = config.transparent_background and "NONE" or colors.bg },
 		NormalFloat = { bg = colors.bg2 },
 		NormalNC = { fg = colors.fg, bg = config.transparent_background and "NONE" or colors.bg },
 		Number = { fg = colors.orange },
 
 		Operator = { fg = colors.fg },
-		Pmenu = { fg = colors.gray14, bg = colors.bg2 },
+		Pmenu = { fg = colors.gray10, bg = colors.bg2 },
 		PmenuSbar = { bg = colors.bg4 },
-		PmenuSel = { fg = colors.gray6, bg = colors.bg2 },
+		PmenuSel = { fg = colors.gray4, bg = colors.bg2 },
 		PmenuThumb = { bg = colors.bg2 },
 		PreCondit = { fg = colors.blue },
 		PreProc = { fg = colors.blue },
@@ -152,47 +148,48 @@ function M.setup(opts)
 
 		Repeat = { fg = colors.red },
 
-		Search = { fg = colors.gray6, bg = colors.orange },
+		Search = { fg = colors.gray4, bg = colors.orange },
 		SignColumn = { bg = colors.bg1 },
-		Special = { fg = colors.gray4 },
+		Special = { fg = colors.gray3 },
 		SpecialChar = { fg = colors.yellow },
 		SpecialComment = { fg = colors.pink },
-		SpecialKey = { fg = colors.gray4, bold = true },
+		SpecialKey = { fg = colors.gray3, bold = true },
 		SpellBad = { fg = colors.red, underline = true },
 		SpellCap = { fg = colors.orange, underline = true },
 		SpellLocal = { fg = colors.green, underline = true },
 		SpellRare = { fg = colors.pink, underline = true },
 		Statement = { fg = colors.red },
-		StatusLine = { fg = colors.gray6, bg = colors.bg2 },
-		StatusLineNC = { fg = colors.gray6, bg = colors.bg2 },
+		StatusLine = { fg = colors.gray4, bg = colors.bg2 },
+		StatusLineNC = { fg = colors.gray4, bg = colors.bg2 },
 		StatusLineSeparator = { fg = colors.bg2 },
 		StatusLineTerm = { fg = colors.green, bg = colors.bg2 },
-		StatusLineTermNC = { fg = colors.gray4, bg = colors.bg2 },
+		StatusLineTermNC = { fg = colors.gray3, bg = colors.bg2 },
 		StorageClass = { fg = colors.red },
 		String = { fg = colors.yellow },
 		Structure = { fg = colors.green },
-		Substitute = { fg = colors.gray9, bg = colors.orange },
+		Substitute = { fg = colors.gray7, bg = colors.orange },
 
-		TabLine = { fg = colors.gray6 },
-		TabLineFill = { fg = colors.gray6 },
+		TabLine = { fg = colors.gray4 },
+		TabLineFill = { fg = colors.gray4 },
 		TabLineSel = { fg = colors.fg },
-		Tag = { fg = colors.gray4 },
-		TermCursor = { fg = colors.fg, bg = colors.gray11 },
-		TermCursorNC = { fg = colors.fg, bg = colors.gray11 },
-		Title = { fg = colors.gray4 },
+		Tag = { fg = colors.gray3 },
+		TermCursor = { fg = colors.fg, bg = colors.gray8 },
+		TermCursorNC = { fg = colors.fg, bg = colors.gray8 },
+		Title = { fg = colors.gray3 },
 		Todo = { fg = colors.yellow, bold = true },
 		Type = { fg = colors.blue, italic = config.italic_keywords == "italic" },
 		Typedef = { fg = colors.blue, italic = config.italic_keywords == "italic" },
 
 		Variable = { fg = colors.fg },
 		VertSplit = { fg = colors.gray2 },
+		WinSeparator = { fg = colors.gray1 },
 		Visual = { fg = "NONE", bg = colors.bg3, bold = true },
-		VisualNOS = { fg = colors.gray3, bg = colors.gray7 },
+		VisualNOS = { fg = colors.gray2, bg = colors.gray5 },
 
 		WarningMsg = { fg = colors.orange2, bg = colors.bg },
-		Whitespace = { fg = colors.gray8 },
+		Whitespace = { fg = colors.gray6 },
 		WildMenu = { fg = colors.fg },
-		lCursor = { fg = colors.fg, bg = colors.gray11 },
+		lCursor = { fg = colors.fg, bg = colors.gray8 },
 
 		-- Markdown
 		markdownBold = { fg = colors.fg, bold = true },
@@ -209,17 +206,17 @@ function M.setup(opts)
 		markdownId = { fg = colors.pink },
 		markdownItalic = { fg = colors.fg, italic = true },
 		markdownLinkText = { fg = colors.fg },
-		markdownRule = { fg = colors.gray12 },
+		markdownRule = { fg = colors.gray9 },
 		markdownListMarker = { fg = colors.red },
 		markdownHeadingDelimiter = { fg = colors.fg },
-		markdownHeadingRule = { fg = colors.gray12 },
+		markdownHeadingRule = { fg = colors.gray9 },
 		markdownUrlTitleDelimiter = { fg = colors.fg },
 		markdownCodeSpecial = { fg = colors.orange },
 		markdownCodeDelimiter = { fg = colors.green },
-		markdownBlockquote = { fg = colors.gray12 },
+		markdownBlockquote = { fg = colors.gray9 },
 		markdownIdDeclaration = { fg = colors.fg },
-		markdownIdDelimiter = { fg = colors.gray9 },
-		markdownLinkDelimiter = { fg = colors.gray9 },
+		markdownIdDelimiter = { fg = colors.gray7 },
+		markdownLinkDelimiter = { fg = colors.gray7 },
 		markdownOrderedListMarker = { fg = colors.red },
 
 		-----------------------------------------
@@ -232,10 +229,10 @@ function M.setup(opts)
 		BufferCurrentMod = { fg = colors.yellow, bg = colors.bg },
 		BufferCurrentSign = { fg = colors.blue, bg = colors.bg },
 		BufferCurrentTarget = { fg = colors.red, bg = colors.bg, bold = true },
-		BufferInactive = { fg = colors.gray9, bg = colors.bg2 },
-		BufferInactiveIndex = { fg = colors.gray9, bg = colors.bg2 },
+		BufferInactive = { fg = colors.gray7, bg = colors.bg2 },
+		BufferInactiveIndex = { fg = colors.gray7, bg = colors.bg2 },
 		BufferInactiveMod = { fg = colors.yellow, bg = colors.bg2 },
-		BufferInactiveSign = { fg = colors.gray9, bg = colors.bg2 },
+		BufferInactiveSign = { fg = colors.gray7, bg = colors.bg2 },
 		BufferInactiveTarget = { fg = colors.red, bg = colors.bg2, bold = true },
 		BufferVisible = { fg = colors.fg, bg = colors.bg },
 		BufferVisibleIndex = { fg = colors.fg, bg = colors.bg },
@@ -252,9 +249,9 @@ function M.setup(opts)
 		WhichKeyFloat = { bg = colors.bg2 },
 
 		-- Cmp
-		CmpItemAbbrDeprecated = { fg = colors.gray2 },
+		CmpItemAbbrDeprecated = { fg = colors.gray1 },
 		CmpDocumentation = { fg = colors.fg },
-		CmpDocumentationBorder = { fg = colors.gray9 },
+		CmpDocumentationBorder = { fg = colors.gray7 },
 		CmpItemAbbr = { fg = colors.fg },
 		CmpItemAbbrMatch = { fg = colors.blue },
 		CmpItemAbbrMatchFuzzy = { fg = colors.blue },
@@ -280,10 +277,10 @@ function M.setup(opts)
 
 		-- Debug
 		debugBreakpoint = { fg = colors.red, reverse = true },
-		debugPc = { bg = colors.gray14 },
+		debugPc = { bg = colors.gray10 },
 
 		-- Diffview
-		DiffViewNormal = { fg = colors.gray9, bg = colors.bg2 },
+		DiffViewNormal = { fg = colors.gray7, bg = colors.bg2 },
 		DiffviewFilePanelDeletion = { fg = colors.red2 },
 		DiffviewFilePanelInsertion = { fg = colors.green2 },
 		DiffviewStatusAdded = { fg = colors.green2 },
@@ -304,8 +301,8 @@ function M.setup(opts)
 
 		-- Indent-blankline
 		IndentBlanklineChar = { fg = colors.bg3 },
-		IndentBlanklineContextChar = { fg = colors.gray9 },
-		IndentBlanklineSpaceChar = { fg = colors.gray14 },
+		IndentBlanklineContextChar = { fg = colors.gray7 },
+		IndentBlanklineSpaceChar = { fg = colors.gray10 },
 		IndentBlanklineSpaceCharBlankline = { fg = colors.yellow },
 
 		-- LSP Diagnostics
@@ -332,15 +329,15 @@ function M.setup(opts)
 		DiagnosticUnderlineWarn = { underline = true },
 
 		DiagnosticVirtualTextError = { fg = colors.red2 },
-		DiagnosticVirtualTextHint = { fg = colors.gray9 },
+		DiagnosticVirtualTextHint = { fg = colors.gray7 },
 
 		-- NERDTree
 		Directory = { fg = colors.fg },
 		NERDTreeUp = { fg = colors.yellow },
 		NERDTreeDir = { fg = colors.blue },
-		NERDTreeOpenable = { fg = colors.gray2 },
+		NERDTreeOpenable = { fg = colors.gray1 },
 		NERDTreeClosable = { fg = colors.red },
-		NERDTreeIgnore = { fg = colors.gray2 },
+		NERDTreeIgnore = { fg = colors.gray1 },
 		NERDTreeHelpKey = { fg = colors.fg },
 		NERDTreeHelpTitle = { fg = colors.pink },
 		NERDTreeToggleOn = { fg = colors.green },
@@ -350,8 +347,8 @@ function M.setup(opts)
 		NERDTreeLinkTarget = { fg = colors.blue },
 		NERDTreeLinkFile = { fg = colors.green },
 		NERDTreeLinkDir = { fg = colors.pink },
-		NERDTreeNodeDelimiters = { fg = colors.gray2 },
-		NERDTreeDirSlash = { fg = colors.gray2 },
+		NERDTreeNodeDelimiters = { fg = colors.gray1 },
+		NERDTreeDirSlash = { fg = colors.gray1 },
 		NERDTreeExecFile = { fg = colors.green },
 		NERDTreeRO = { fg = colors.orange },
 		NERDTreeBookmarkName = { fg = colors.orange },
@@ -362,28 +359,28 @@ function M.setup(opts)
 		NERDTreeBookmark = { fg = colors.orange },
 		NERDTreePart = { fg = colors.orange },
 		NERDTreePartFile = { fg = colors.blue },
-		NERDTreeCurrentNode = { fg = colors.gray2 },
+		NERDTreeCurrentNode = { fg = colors.gray1 },
 
 		-- Startify
-		StartifyEndOfBuffer = { fg = colors.gray8 },
+		StartifyEndOfBuffer = { fg = colors.gray6 },
 		StartifyNumber = { fg = colors.red },
-		StartifySelect = { fg = colors.gray2 },
+		StartifySelect = { fg = colors.gray1 },
 		StartifyBracket = { fg = colors.fg },
 		StartifySpecial = { fg = colors.yellow },
-		StartifyVar = { fg = colors.gray2 },
-		StartifyPath = { fg = colors.gray2 },
+		StartifyVar = { fg = colors.gray1 },
+		StartifyPath = { fg = colors.gray1 },
 		StartifyFile = { fg = colors.blue },
-		StartifySlash = { fg = colors.gray2 },
+		StartifySlash = { fg = colors.gray1 },
 		StartifyHeader = { fg = colors.blue },
 		StartifyFooter = { fg = colors.pink },
 		StartifySection = { fg = colors.pink },
 
 		-- Indent Guides
-		IndentGuidesEven = { fg = colors.gray14 },
-		IndentGuidesOdd = { fg = colors.gray2 },
+		IndentGuidesEven = { fg = colors.gray10 },
+		IndentGuidesOdd = { fg = colors.gray1 },
 
 		-- Flutter Tools
-		FlutterWidgetGuides = { fg = colors.gray9 },
+		FlutterWidgetGuides = { fg = colors.gray7 },
 
 		-- Python
 		pythonConditional = { fg = colors.red },
@@ -397,21 +394,21 @@ function M.setup(opts)
 		-- Neogit
 		NeogitBranch = { fg = colors.pink },
 		NeogitRemote = { fg = colors.pink },
-		NeogitHunkHeader = { fg = colors.gray12, bg = colors.bg2 },
-		NeogitDiffContext = { fg = colors.gray12, bg = colors.bg },
+		NeogitHunkHeader = { fg = colors.gray9, bg = colors.bg2 },
+		NeogitDiffContext = { fg = colors.gray9, bg = colors.bg },
 		NeogitDiffAdd = { fg = colors.green2, bg = colors.bg2 },
 		NeogitDiffDelete = { fg = colors.red2, bg = colors.bg2 },
-		NeogitHunkHeaderHighlight = { fg = colors.gray12, bg = colors.bg2 },
-		NeogitDiffContextHighlight = { fg = colors.gray12, bg = colors.bg },
+		NeogitHunkHeaderHighlight = { fg = colors.gray9, bg = colors.bg2 },
+		NeogitDiffContextHighlight = { fg = colors.gray9, bg = colors.bg },
 		NeogitDiffAddHighlight = { fg = colors.green2, bg = colors.bg2 },
 		NeogitDiffDeleteHighlight = { fg = colors.red2, bg = colors.bg2 },
 
 		-- Nvim-tree
 		NvimTreeFolderIcon = { fg = colors.orange },
 		NvimTreeEmptyFolderName = { fg = colors.yellow, italic = true },
-		NvimTreeCursorLine = { fg = colors.gray6, bg = colors.bg3 },
+		NvimTreeCursorLine = { fg = colors.gray4, bg = colors.bg3 },
 		NvimTreeExecFile = { fg = colors.green },
-		NvimTreeFolderName = { fg = colors.gray14 },
+		NvimTreeFolderName = { fg = colors.gray10 },
 		NvimTreeGitDeleted = { fg = colors.red2 },
 		NvimTreeGitDirty = { fg = colors.green2 },
 		NvimTreeGitMerge = { fg = colors.blue3 },
@@ -419,32 +416,32 @@ function M.setup(opts)
 		NvimTreeGitRenamed = { fg = colors.blue3 },
 		NvimTreeGitStaged = { fg = colors.green2 },
 		NvimTreeImageFile = { fg = colors.pink },
-		NvimTreeIndentMarker = { fg = colors.gray2 },
-		NvimTreeNormal = { fg = colors.gray14, bg = colors.bg2 },
+		NvimTreeIndentMarker = { fg = colors.gray1 },
+		NvimTreeNormal = { fg = colors.gray10, bg = colors.bg2 },
 		NvimTreeNormalNC = { bg = colors.bg2 },
-		NvimTreeOpenedFolderName = { fg = colors.gray14, italic = true },
+		NvimTreeOpenedFolderName = { fg = colors.gray10, italic = true },
 		NvimTreeRootFolder = { fg = colors.yellow, bold = true },
 		NvimTreeSpecialFile = { fg = colors.orange },
 		NvimTreeSymlink = { fg = colors.yellow },
 		NvimTreeVertSplit = { fg = colors.bg2 },
-		NvimTreeEndOfBuffer = { fg = colors.gray8 },
+		NvimTreeEndOfBuffer = { fg = colors.gray6 },
 
 		-- Telescope
 		TelescopeBorder = { fg = colors.fg, bg = config.transparent_background and "NONE" or colors.bg },
 		TelescopeMatching = { fg = colors.yellow },
 		TelescopePromptPrefix = { fg = colors.green },
-		TelescopeSelection = { fg = colors.gray2, bg = colors.bg3 },
+		TelescopeSelection = { fg = colors.gray1, bg = colors.bg3 },
 
 		-- Trouble
 		TroubleTextInformation = { fg = colors.blue },
 		TroubleFile = { fg = colors.yellow },
 		TroubleFoldIcon = { fg = colors.blue },
 		TroubleCount = { fg = colors.red },
-		TroubleError = { fg = colors.red, bg = colors.gray6 },
+		TroubleError = { fg = colors.red, bg = colors.gray4 },
 		TroubleTextError = { fg = colors.red },
 		TroubleNormal = { fg = colors.fg },
 		TroubleLocation = { fg = colors.fg },
-		TroubleIndent = { fg = colors.gray2 },
+		TroubleIndent = { fg = colors.gray1 },
 		TroubleCode = { fg = colors.orange2 },
 		TroubleSignError = { fg = colors.red },
 		TroubleSignWarning = { fg = colors.orange2 },
@@ -466,13 +463,13 @@ function M.setup(opts)
 		CodeActionMenuMenuIndex = { fg = colors.blue },
 		CodeActionMenuMenuKind = { fg = colors.green },
 		CodeActionMenuMenuTitle = { fg = colors.fg },
-		CodeActionMenuMenuDisabled = { fg = colors.gray2 },
+		CodeActionMenuMenuDisabled = { fg = colors.gray1 },
 		CodeActionMenuMenuSelection = { fg = colors.blue },
 		CodeActionMenuDetailsTitle = { fg = colors.fg },
 		CodeActionMenuDetailsLabel = { fg = colors.yellow },
 		CodeActionMenuDetailsPreferred = { fg = colors.green },
-		CodeActionMenuDetailsDisabled = { fg = colors.gray2 },
-		CodeActionMenuDetailsUndefined = { fg = colors.gray2 },
+		CodeActionMenuDetailsDisabled = { fg = colors.gray1 },
+		CodeActionMenuDetailsUndefined = { fg = colors.gray1 },
 
 		-- CMake
 		cmakeCommand = { fg = colors.fg },
@@ -489,7 +486,7 @@ function M.setup(opts)
 		TSBoolean = { fg = colors.orange, italic = config.italic_booleans == "italic" },
 		TSCharacter = { fg = colors.yellow },
 		TSCharacterSpecial = { fg = colors.yellow },
-		TSComment = { fg = colors.gray2, italic = config.italic_comments == "italic" },
+		TSComment = { fg = colors.gray1, italic = config.italic_comments == "italic" },
 		TSConditional = { fg = colors.red, italic = config.italic_keywords == "italic" },
 		TSConstBuiltin = { fg = colors.pink },
 		TSConstMacro = { fg = colors.blue },
@@ -520,7 +517,7 @@ function M.setup(opts)
 		TSProperty = { fg = colors.fg },
 		TSPunctBracket = { fg = colors.fg },
 		TSPunctDelimiter = { fg = colors.fg },
-		TSPunctSpecial = { fg = colors.gray4 },
+		TSPunctSpecial = { fg = colors.gray3 },
 		TSQueryLinterError = { fg = colors.red2 },
 		TSRepeat = { fg = colors.red, italic = config.italic_keywords == "italic" },
 		TSString = { fg = colors.yellow },
@@ -530,7 +527,7 @@ function M.setup(opts)
 		TSStructure = { fg = colors.red },
 		TSSymbol = { fg = colors.fg },
 		TSTag = { fg = colors.red },
-		TSTagDelimiter = { fg = colors.gray4 },
+		TSTagDelimiter = { fg = colors.gray3 },
 		TSText = { fg = colors.fg },
 		TSTitle = { fg = colors.fg, bold = true },
 		TSType = { fg = colors.blue },
@@ -549,7 +546,7 @@ function M.setup(opts)
 		["@boolean"] = { fg = colors.orange, italic = config.italic_booleans == "italic" },
 		["@character"] = { fg = colors.yellow },
 		["@character.special"] = { fg = colors.yellow },
-		["@comment"] = { fg = colors.gray2, italic = config.italic_comments == "italic" },
+		["@comment"] = { fg = colors.gray1, italic = config.italic_comments == "italic" },
 		["@conditional"] = { fg = colors.red, italic = config.italic_keywords == "italic" },
 		["@constant"] = { fg = colors.pink },
 		["@constant.builtin"] = { fg = colors.pink },
@@ -579,7 +576,7 @@ function M.setup(opts)
 		["@property"] = { fg = colors.fg },
 		["@punctuation.bracket"] = { fg = colors.fg },
 		["@punctuation.delimiter"] = { fg = colors.fg },
-		["@punctuation.special"] = { fg = colors.gray4 },
+		["@punctuation.special"] = { fg = colors.gray3 },
 		["@repeat"] = { fg = colors.red, italic = config.italic_keywords == "italic" },
 		["@string"] = { fg = colors.green },
 		["@string.escape"] = { fg = colors.green },
@@ -587,7 +584,7 @@ function M.setup(opts)
 		["@string.special"] = { fg = colors.yellow },
 		["@symbol"] = { fg = colors.fg },
 		["@tag"] = { fg = colors.red },
-		["@tag.delimiter"] = { fg = colors.gray4 },
+		["@tag.delimiter"] = { fg = colors.gray3 },
 		["@text"] = { fg = colors.fg },
 		["@text.strong"] = { fg = colors.yellow },
 		["@text.title"] = { fg = colors.fg, bold = true },
