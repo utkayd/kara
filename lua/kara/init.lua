@@ -270,6 +270,61 @@ function M.setup(opts)
 		CmpItemMenu = { fg = colors.pink },
 		CmpItemKindOperator = { fg = colors.red },
 
+		-- Blink.cmp
+		BlinkCmpMenu = { fg = colors.gray14, bg = colors.bg2 },
+		BlinkCmpMenuBorder = { fg = colors.gray1, bg = colors.bg2 },
+		BlinkCmpMenuSelection = { bg = colors.bg3, bold = true },
+		BlinkCmpScrollBarThumb = { bg = colors.gray2 },
+		BlinkCmpScrollBarGutter = { bg = colors.gray7 },
+
+		BlinkCmpLabel = { fg = colors.gray9 },
+		BlinkCmpLabelDeprecated = { fg = colors.gray2, strikethrough = true },
+		BlinkCmpLabelMatch = { fg = colors.blue, bold = true },
+		BlinkCmpLabelDetail = { fg = colors.gray9 },
+		BlinkCmpLabelDescription = { fg = colors.gray9 },
+
+		BlinkCmpGhostText = { fg = colors.gray8 },
+
+		BlinkCmpDoc = { fg = colors.fg, bg = colors.bg2 },
+		BlinkCmpDocBorder = { fg = colors.gray9, bg = colors.bg2 },
+		BlinkCmpDocSeparator = { fg = colors.gray9, bg = colors.bg2 },
+		BlinkCmpDocCursorLine = { bg = colors.bg3 },
+
+		BlinkCmpSignatureHelp = { fg = colors.fg, bg = colors.bg2 },
+		BlinkCmpSignatureHelpBorder = { fg = colors.gray9, bg = colors.bg2 },
+		BlinkCmpSignatureHelpActiveParameter = { fg = colors.yellow, bold = true },
+
+		BlinkCmpSource = { fg = colors.pink },
+
+		-- Blink.cmp Kind highlights
+		BlinkCmpKind = { fg = colors.blue },
+		BlinkCmpKindClass = { fg = colors.yellow },
+		BlinkCmpKindColor = { fg = colors.red },
+		BlinkCmpKindConstant = { fg = colors.orange },
+		BlinkCmpKindConstructor = { fg = colors.blue },
+		BlinkCmpKindEnum = { fg = colors.yellow },
+		BlinkCmpKindEnumMember = { fg = colors.blue3 },
+		BlinkCmpKindEvent = { fg = colors.blue },
+		BlinkCmpKindField = { fg = colors.green },
+		BlinkCmpKindFile = { fg = colors.blue },
+		BlinkCmpKindFolder = { fg = colors.blue },
+		BlinkCmpKindFunction = { fg = colors.blue },
+		BlinkCmpKindInterface = { fg = colors.yellow },
+		BlinkCmpKindKeyword = { fg = colors.pink },
+		BlinkCmpKindMethod = { fg = colors.blue },
+		BlinkCmpKindModule = { fg = colors.blue },
+		BlinkCmpKindOperator = { fg = colors.blue3 },
+		BlinkCmpKindProperty = { fg = colors.blue },
+		BlinkCmpKindReference = { fg = colors.red },
+		BlinkCmpKindSnippet = { fg = colors.red },
+		BlinkCmpKindStruct = { fg = colors.blue },
+		BlinkCmpKindText = { fg = colors.green },
+		BlinkCmpKindTypeParameter = { fg = colors.red },
+		BlinkCmpKindUnit = { fg = colors.green },
+		BlinkCmpKindValue = { fg = colors.orange },
+		BlinkCmpKindVariable = { fg = colors.red },
+		BlinkCmpKindCopilot = { fg = colors.blue3 },
+
 		-- Dashboard
 		DashboardCenter = { fg = colors.fg },
 		DashboardFooter = { fg = colors.yellow },
