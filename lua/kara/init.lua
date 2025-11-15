@@ -8,11 +8,11 @@ M.colors = {
 
 	-- Background variants
 	bg2 = "#22252a", -- dark, black
-	bg3 = "#242e42",
+	bg3 = "#3d4f6d", -- visual selection, cursor line
 
 	-- Foreground/Gray variants
-	gray1 = "#4D5264", -- darkest - comments, borders, inactive elements
-	gray2 = "#7B8394", -- medium - line numbers, delimiters, secondary text
+	gray1 = "#6B7A94", -- darkest - comments, borders, inactive elements
+	gray2 = "#8B9AAF", -- medium - line numbers, delimiters, secondary text
 	gray3 = "#C6D0E0", -- lightest - active text, important UI elements
 
 	-- Primary colors
@@ -24,7 +24,7 @@ M.colors = {
 	blue2 = "#6CAEC0",
 	yellow = "#EED49F",
 	orange = "#E0828D",
-	orange2 = "#FB8500",
+	orange2 = "#FAB387",
 	pink = "#D895C7",
 	purple = "#6a4c93",
 }
