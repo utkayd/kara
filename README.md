@@ -149,12 +149,10 @@ Kara includes built-in support for popular Neovim plugins:
 ```
 kara/
 ├── colors/
-│   └── kara.lua              # Colorscheme entry point
+│   └── kara.lua    # Colorscheme entry point
 ├── lua/
 │   └── kara/
-│       ├── init.lua          # Main module with setup and highlights
-│       ├── test.lua          # Lush-based reference (auto-generated)
-│       └── test_colors.lua   # Color palette reference
+│       └── init.lua # Main module with setup and highlights
 └── README.md
 ```
 
